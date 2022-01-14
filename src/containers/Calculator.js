@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import KeyPad from '../components/KeyPad';
 import '../App.css';
+/* global BigInt */
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
       setNewTotal(false);
     }
 
-    setRunningTotal(parseFloat("" + tempTotal + number));
+    setRunningTotal(BigInt("" + tempTotal + number));
   }
 
   const handleDecimal = () => {
